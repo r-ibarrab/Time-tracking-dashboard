@@ -87,7 +87,13 @@ p{
     flex-direction: column;
     justify-content: space-between;
     padding: 5% 8%;
+    transition: background-color 0.3s;
+    cursor: pointer;
 
+}
+
+.time-summary:hover{
+    background-color: var(--desaturated-blue);
 }
 
 .time-hours{
@@ -158,6 +164,25 @@ p{
     font-size: 1.5rem;
 }
 
+.range-selection{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top:30px;
+    height:40%;
+    
+}
+
+.range-selection h3{
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    opacity:0.5;
+}
+
+.range-selection h3:hover{
+    opacity: 1;
+}
 
 @media screen and (min-width:700px){
 
@@ -185,5 +210,14 @@ p{
     }
     .user-name{
         margin-top: 15px;
+    }
+    .range-selection{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        padding:5%;
+        height:40%;
+        
     }
 }
