@@ -1,0 +1,190 @@
+:root{
+    --blue:hsl(246, 80%, 60%);
+    --light-red: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Ligh-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background-color: var(--very-dark-blue);
+}
+
+h3{
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+p{
+    font-weight:lighter;
+    font-size: 0.6rem;
+}
+
+.container-grid{
+    height: fit-content;
+    padding:20px 5px;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+    grid-gap: 20px;
+    grid-template-rows: 200px repeat(auto-fit,120px) ;
+
+
+}
+
+.item{
+    width: 90%;
+    height:100%;
+    border-radius: 15px;
+    margin: auto;
+    background-color: var(--dark-blue);
+    max-width: 350px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.item>img{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 1;
+
+}
+
+.time-summary{
+    width: 100%;
+    height: 75%;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 8%;
+
+}
+
+.time-hours{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.time-options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.work{
+    background-color: var(--light-red);
+}
+.play{
+    background-color: var(--Soft-blue);
+}
+.study{
+    background-color: var(--Ligh-red);
+}
+.exercise{
+    background-color: var(--Lime-green);
+}
+.social{
+    background-color: var(--violet);
+}
+.self-care{
+    background-color: var(--soft-orange);
+}
+
+.report{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+.user-info{
+    width: 100%;
+    height: 60%;
+    padding:15px 20px;
+    background-color: var(--blue);
+    display: flex;
+    border-radius: 15px;
+}
+
+.user-info img{
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.user-name{
+    padding:0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.user-name h3{
+    font-size: 1.5rem;
+}
+
+
+@media screen and (min-width:700px){
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-grid{
+        grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+        width:95%;
+        height: 60%;
+        grid-gap: 30px 10px;
+
+    }
+    .report{
+        height: 100%;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    
+    .user-info{
+        display: inline;
+
+    }
+    .user-name{
+        margin-top: 15px;
+    }
+}
